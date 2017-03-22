@@ -1,0 +1,244 @@
+/**
+ * plugins/themes/tsvResponsive/tsvResponsive.css
+ *
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * tsvResponsive theme.
+ */
+ 
+body {
+	background-color: #a2321a;
+	padding: 0;
+	width: 100%;	
+}
+
+ #container {
+	margin: 0;
+	padding: 0;
+	min-width: 300px !important;
+	background: #ffffff;
+}
+
+#header {
+	margin: 0 auto;
+	padding: 0;
+	max-width: 960px;
+	background-color: #ffffff;
+	clear: both;
+}
+
+#headerTitle, #header h1 {
+	margin: 0;
+	padding: 0;
+}
+
+#headerTitle img{
+	max-width: 98%;
+	height: auto;
+	float: left;
+}
+
+#body {
+	display: table; /* re-organize layout using display table  */
+	table-layout: fixed; /* enable max-width */
+	border-collapse: collapse;	
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#main {
+	display: table-header-group; /* move main to top */
+	float: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+}
+
+ #navbar, #breadcrumb, #content, #main h2{
+	float: none; /* stop floating elements */
+	width: 98%;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 10px 0px 10px 0px;	
+ }
+
+
+ 
+#main h2{
+	display: block;		
+}
+#main img{
+
+	max-width: 100%;
+	height:auto;
+	padding: 0;
+}
+
+#sidebar { 
+	display: table-footer-group; /* move sidebar to bottom to create a footer */
+	width: 100%;
+	border-top: 4px solid #a2321a;
+	background-color: #a2321a;
+}
+
+#leftSidebar {
+	display: none; /* no left siderbar in this theme */
+}
+
+#rightSidebar {
+	float: none; /* stop floating the right sidebar */
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	display: -ms-flexbox;
+	-webkit-flex-flow: row wrap;
+	display: flex;
+    flex-flow: row wrap;
+}
+
+#sidebar div.block {
+	width: auto;
+	margin: 15px;
+	padding: 10px;
+	color: #ecf0f1;
+	float: left;
+	background: #9b3019;
+	-webkit-border-radius: 12px;-moz-border-radius: 12px;border-radius: 12px;
+}
+#sidebar div.custom{
+	background: none;
+}
+
+#sidebar a, #sidebar a:hover{
+	color: #ecf0f1;
+	background: none;
+}
+
+
+/* Navigation */
+#navbar {
+	border: 0;
+	margin-top: 20px;
+	padding: 2px 0 2px 0;
+	text-align: left;
+	
+}
+#navbar a, #navbar a:visited, #navbar a:hover{
+	font-size: 0.7em;
+	color: #555;
+	background: none;
+}
+#navbar .menu li{
+	line-height: 2em;
+	padding: 2px 6px 4px 6px;
+	background: #fff;
+	-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;
+	-webkit-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.51);
+	-moz-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.51);
+	box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.51);
+}
+#navbar .menu li:hover{
+	background: #fff;
+}
+
+
+
+#breadcrumb{
+	font-size: 0.6em;
+	
+}
+
+/* Fonts and colors */
+
+body{
+	font-family: Verdana,Arial,Helvetica,sans-serif;	
+	font-size: 1.2em;
+} 
+ 
+body {
+	color: #000000;
+}
+
+a:link {
+	color: #000000;
+}
+
+a:active {
+	color: #000000;
+}
+
+a:visited {
+	color: #808080;
+}
+
+a:hover {
+	color: red;
+	background: #ffffff;
+}
+
+input.textField, select.selectMenu, textarea.textArea, input.uploadField {
+	background-color: #eeeeee;
+}
+
+input.defaultButton {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+
+td.tocGalleys {
+	padding-right: 10px;
+}
+
+
+/* Forms  */
+input.textField, select.selectMenu, textarea.textArea, input.uploadField {
+	background-color: #fff;
+	color: #333;
+	border: 1px solid #888;
+	font-size: 1.3em;
+}
+
+input.button {
+	padding-left: 0;
+	padding-right: 0;
+	background-color: #fff;
+	font-size: 1.3em;
+}
+
+input.defaultButton {
+	background-color: #375;
+	color: #FBFBF3;
+	font-weight: bold;
+}
+#sidebar input.textField, #sidebar select.selectMenu, #sidebar input.button {
+	font-size: 1.1em;
+}
+
+
+/* Media queries */
+
+
+@media only screen and (max-width:30em) { 
+	#sidebar div.block {
+		width: 90%;
+		float: none;
+		color: #fff;
+		margin: 10px auto;
+		background: #9b3019;
+		-webkit-border-radius: 12px;-moz-border-radius: 12px;border-radius: 12px;
+	}
+@-ms-viewport {
+	width: device-width;
+}
+	
+}
+
+
+
+
+
